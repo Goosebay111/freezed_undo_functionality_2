@@ -17,6 +17,7 @@ NestedClass delete({
   return hierarchy.copyWith(
     children: [
       for (var child in hierarchy.children)
+      // Recursively call delete on the children of the hierarchy.
         delete(object: object, hierarchy: child),
     ],
   );
